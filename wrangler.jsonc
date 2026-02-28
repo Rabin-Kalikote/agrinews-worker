@@ -7,12 +7,27 @@
 	"name": "agrinews-worker",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-02-26",
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS"
+	},
 	"observability": {
 		"enabled": true
 	},
 	"compatibility_flags": [
 		"nodejs_compat"
-	]
+	],
+	"d1_databases": [
+		{
+			"binding": "agrinews_db",
+			"database_name": "agrinews-db",
+			"database_id": "0fc40811-f76e-49ff-ac63-49620a80838e",
+			"remote": true
+		}
+	],
+	"triggers": {
+		"crons": ["*/9 * * * *"]
+	}
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
