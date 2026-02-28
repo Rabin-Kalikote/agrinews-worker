@@ -2,6 +2,8 @@ nav{
     text-align: center;
     box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
     position: fixed !important;
+    top: 0;
+    z-index: 1030;
     width: 100%;
     .navbar-brand{
         font-size: 2em;
@@ -14,18 +16,22 @@ nav{
 }
 
 .main-content{
-    padding-top: 7rem !important;
+    padding-top: 6rem !important;
+    @media (max-width: 768px) {
+        padding-top: 5rem !important;
+    }
     .motto-search{
         display: flex;
         flex-direction: column;
-        min-width: 50%;
+        width: 100%;
         max-width: 760px;
-        padding: 0 10px;
+        padding: 0 15px;
         margin: 0 auto 3rem;
         h1{
-            font-size: 1rem;
+            font-size: 1.5rem;
             width: 100%;
             text-align: center;
+            margin-bottom: 1rem;
         }
         form{
             display: flex;
@@ -50,9 +56,9 @@ nav{
         }
     }
     .articles{
-        min-width: 50%;
+        width: 100%;
         max-width: 760px;
-        padding: 0 10px;
+        padding: 0 15px;
         margin: 0 auto 2rem;
         .article{
             .content{
@@ -93,9 +99,8 @@ nav{
 
 .main-content{
     .article{
-        min-width: 50%;
-        max-width: 760px;
-        padding: 0 10px;
+        width: 100%;
+        padding: 0;
         margin: 0 auto 2rem;
         h1 a{
             font-size: 2rem;
